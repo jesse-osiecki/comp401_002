@@ -4,7 +4,7 @@ public class A2Tester {
 
 	public static void main(String[] args) {
 		boolean all_passed = true;
-		
+		/*
 		if (!triangle_test()) {
 			System.out.println("One or more triangle test not passed");
 			all_passed = false;
@@ -14,7 +14,7 @@ public class A2Tester {
 			System.out.println("One or more rectangle test not passed");
 			all_passed = false;
 		}
-		
+		*/
 		if (!polygon_test()) {
 			System.out.println("One or more polygon test not passed");
 			all_passed = false;
