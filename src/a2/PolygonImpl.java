@@ -134,8 +134,17 @@ public class PolygonImpl implements Polygon {
 	}
 
 	public void scale(double factor) {
-		// TODO Auto-generated method stub
-
+		//centroid origin at zero
+		Point c = getCentroid();
+		for(int i = 0; i<points.length; i ++){
+			points[i] = points[i].translate(-1 * c.getX(), -1 * c.getY());
+		}
+		//TODO do I really need two loops here? Seems messy
+		//Scale the shape, move back
+		for(int i = 0; i<points.length; i ++){
+			points[i] = new Point(rtd(points[i].getX() * factor + c.getX()), rtd(points[i].getY() * factor + c.getY()));
+		}
+		
 	}
 
 }
