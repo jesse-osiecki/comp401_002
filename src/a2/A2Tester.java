@@ -4,17 +4,17 @@ public class A2Tester {
 
 	public static void main(String[] args) {
 		boolean all_passed = true;
-		/*
+		
 		if (!triangle_test()) {
 			System.out.println("One or more triangle test not passed");
 			all_passed = false;
 		} 
-		
+
 		if (!rectangle_test()) {
 			System.out.println("One or more rectangle test not passed");
 			all_passed = false;
 		}
-		*/
+
 		if (!polygon_test()) {
 			System.out.println("One or more polygon test not passed");
 			all_passed = false;
@@ -91,8 +91,9 @@ public class A2Tester {
 			System.out.println("T10: Triangle should remain ISOSCELES after scale");
 			tests_passed = false;
 		}
-
 		if (!eps_point_compare(va, p.getVertexAverage())) {
+			System.out.println(va.getX() + " " + va.getY());
+			System.out.println(p.getVertexAverage().getX() + " " + p.getVertexAverage().getY());
 			System.out.println("T11: Triangle vertex average should be the same after scale");
 			tests_passed = false;
 		}
@@ -137,22 +138,29 @@ public class A2Tester {
 		Rectangle r1 = new RectangleImpl(new Point(-1.2, -3), new Point(1.8, 0));
 		
 		if (!eps_point_compare(new Point(-1.2, -3), r1.getLowerLeft())) {
+			System.out.println(r1.getLowerLeft().getX() + " "+ r1.getLowerLeft().getY());
+			System.out.println("-1.2, -3");
 			System.out.println("R1: r1 lower left property not correct");
 			result = false;
 		}
 
 		if (!eps_point_compare(new Point(-1.2, 0), r1.getUpperLeft())) {
+			System.out.println(r1.getUpperLeft().getX() + " "+ r1.getUpperLeft().getY());
+			System.out.println("-1.2, 0");
 			System.out.println("R2: r1 upper left property not correct");
 			result = false;
 		}
 		
 		if (!eps_point_compare(new Point(1.8, 0), r1.getUpperRight())) {
+			System.out.println(r1.getUpperRight().getX() + " "+ r1.getUpperRight().getY());
+			System.out.println("1.8, 0");
 			System.out.println("R3: r1 upper right property not correct");
 			result = false;
 		}
 
 		if (!eps_point_compare(new Point(1.8, -3), r1.getLowerRight())) {
-			System.out.println("R4: r1 lower right property not correct");
+			System.out.println(r1.getLowerRight().getX() + " "+ r1.getLowerRight().getY());
+			System.out.println("1.8, -3");
 			result = false;
 		}
 
@@ -198,21 +206,29 @@ public class A2Tester {
 		Rectangle r2 = new RectangleImpl(new Point(-2.5, 2.5), new Point(1.5, -0.5));
 		
 		if (!eps_point_compare(new Point(-2.5, -0.5), r2.getLowerLeft())) {
+			System.out.println(r2.getLowerLeft().getX() + " "+ r2.getLowerLeft().getY());
+			System.out.println("-2.5, -0.5");
 			System.out.println("R11: lower left property not correct");
 			result = false;
 		}
 
 		if (!eps_point_compare(new Point(-2.5, 2.5), r2.getUpperLeft())) {
+			System.out.println(r2.getUpperLeft().getX() + " "+ r2.getUpperLeft().getY());
+			System.out.println("-2.5, 2.5");
 			System.out.println("R12: upper left property not correct");
 			result = false;
 		}
 		
 		if (!eps_point_compare(new Point(1.5, 2.5), r2.getUpperRight())) {
+			System.out.println(r2.getUpperRight().getX() + " "+ r2.getUpperRight().getY());
+			System.out.println("1.5, 2.5");
 			System.out.println("R13: upper right property not correct");
 			result = false;
 		}
 
 		if (!eps_point_compare(new Point(1.5, -0.5), r2.getLowerRight())) {
+			System.out.println(r2.getLowerRight().getX() + " "+ r2.getLowerRight().getY());
+			System.out.println("1.5, -0.5");
 			System.out.println("R14: lower right property not correct");
 			result = false;
 		}

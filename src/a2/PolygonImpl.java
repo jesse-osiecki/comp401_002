@@ -6,7 +6,6 @@ package a2;
  */
 
 import java.text.DecimalFormat;
-import java.util.Iterator;
 
 public class PolygonImpl implements Polygon {
 	
